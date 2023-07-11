@@ -1,7 +1,18 @@
 import { styled } from "styled-components";
+import NavLogo from "./NavLogo";
+import NavMenu from "./NavMenu";
+import NavPlus from "./NavPlus";
 
 const NavBar = () => {
-  return <NavBarStyled>NavBar</NavBarStyled>;
+  return (
+    <NavBarStyled>
+      <div className="navbar-container">
+        <NavLogo />
+        <NavMenu />
+        <NavPlus />
+      </div>
+    </NavBarStyled>
+  );
 };
 
 export default NavBar;
@@ -16,6 +27,8 @@ const NavBarStyled = styled.div`
   top: 0;
   left: 0;
 
+  padding: 8px 12px 20px;
+
   @media screen and (min-width: 1920px) {
     width: 335px;
   }
@@ -25,13 +38,17 @@ const NavBarStyled = styled.div`
   }
 
   @media screen and (max-width: 767px) {
-      bottom: 0;
-      top: auto;
+    bottom: 0;
+    top: auto;
 
-      height: 50px;
-      width: 100%;
+    height: 50px;
+    width: 100%;
 
-      z-index: 5000;
-      
+    z-index: 5000;
+  }
+
+  .navbar-container {
+    border: 1px solid red;
+    margin-top: 18px;
   }
 `;
