@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 const NavLogo = () => {
   return (
     <NavLogoStyled href="#">
-      <span class="logo-text">Instagrum</span>
+      <span className="logo-text">Instagrum</span>
     </NavLogoStyled>
   );
 };
