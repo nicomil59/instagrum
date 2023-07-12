@@ -18,7 +18,7 @@ const NavBar = () => {
 export default NavBar;
 
 const NavBarStyled = styled.div`
-  background: #f9e7e7;
+  /* background: #f9e7e7; */
 
   height: 100vh;
   width: 244px;
