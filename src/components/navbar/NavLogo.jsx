@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 const NavLogo = () => {
   return (
     <NavLogoStyled href="#">
-      <span>Instagrum</span>
+      <span class="logo-text">Instagrum</span>
     </NavLogoStyled>
   );
 };
@@ -11,5 +11,10 @@ const NavLogo = () => {
 export default NavLogo;
 
 const NavLogoStyled = styled.a`
-  background: lightgrey;
+  padding: 12px;
+
+  .logo-text {
+    font-family: "Lobster Two", cursive;
+    font-size: 1.6rem;
+  }
 `;
