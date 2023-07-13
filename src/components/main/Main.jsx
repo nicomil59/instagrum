@@ -16,7 +16,7 @@ const MainStyled = styled.main`
     margin-left: 335px;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1264px) {
+  @media screen and (min-width: 768px) and (max-width: 1263px) {
     margin-left: 72px;
   }
 

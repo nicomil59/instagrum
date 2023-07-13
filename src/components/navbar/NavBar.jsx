@@ -29,12 +29,22 @@ const NavBarStyled = styled.div`
   left: 0;
 
   padding: 8px 12px 20px;
-
+  
+  .navbar-container {
+    margin-top: 18px;
+    
+    height: calc(100vh - 47px);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
   @media screen and (min-width: 1920px) {
     width: 335px;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1264px) {
+  @media screen and (min-width: 768px) and (max-width: 1263px) {
     width: 72px;
   }
 
@@ -46,15 +56,5 @@ const NavBarStyled = styled.div`
     width: 100%;
 
     z-index: 5000;
-  }
-
-  .navbar-container {
-    margin-top: 18px;
-
-    height: calc(100vh - 47px);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
 `;
