@@ -29,6 +29,8 @@ const NavLogoStyled = styled.a`
   }
 
   @media screen and (min-width: 768px) and (max-width: 1263px) {
+    margin-bottom: 32px;
+    
     &:hover {
       background-color: ${theme.colors.greyExtraLight};
       transition: background-color 0.3s;
