@@ -12,6 +12,7 @@ export default NavLogo;
 
 const NavLogoStyled = styled.a`
   padding: 12px;
+  margin-bottom: 24px;
 
   .logo-text {
     font-family: "Lobster Two", cursive;

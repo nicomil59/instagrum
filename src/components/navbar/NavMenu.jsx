@@ -5,9 +5,9 @@ import {
   AiOutlineHeart,
   AiOutlinePlaySquare,
   AiOutlinePlusSquare,
-  AiOutlineSearch,
 } from "react-icons/ai";
 import { FaRegPaperPlane } from "react-icons/fa6";
+import { RiSearchLine } from "react-icons/ri";
 import NavItem from "./NavItem";
 
 const NavMenu = () => {
@@ -15,7 +15,7 @@ const NavMenu = () => {
     <NavMenuStyled>
       <ul>
         <NavItem Icon={<AiFillHome className="icon" />} text="Accueil" />
-        <NavItem Icon={<AiOutlineSearch className="icon" />} text="Recherche" />
+        <NavItem Icon={<RiSearchLine className="icon" />} text="Recherche" />
         <NavItem
           Icon={<AiOutlineCompass className="icon" />}
           text="Découvrir"
@@ -46,6 +46,8 @@ export default NavMenu;
 
 const NavMenuStyled = styled.nav`
   /* background: lightsalmon; */
+
+  margin-bottom: auto;
 
   ul {
     list-style-type: none;

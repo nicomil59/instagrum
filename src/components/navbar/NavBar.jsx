@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import NavLogo from "./NavLogo";
 import NavMenu from "./NavMenu";
 import NavPlus from "./NavPlus";
+import { theme } from "../../theme";
 
 const NavBar = () => {
   return (
@@ -18,7 +19,7 @@ const NavBar = () => {
 export default NavBar;
 
 const NavBarStyled = styled.div`
-  /* background: #f9e7e7; */
+  border-right: 1px solid ${theme.colors.greyMedium};
 
   height: 100vh;
   width: 244px;
@@ -48,7 +49,12 @@ const NavBarStyled = styled.div`
   }
 
   .navbar-container {
-    border: 1px solid red;
     margin-top: 18px;
+
+    height: calc(100vh - 47px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 `;

@@ -21,7 +21,7 @@ const NavItemStyled = styled.li`
     padding: 12px;
     display: flex;
     align-items: center;
-    border-radius: 8px;
+    border-radius: ${theme.borderRadius.round};
     transition: background-color 0.3s;
 
     &:hover {
