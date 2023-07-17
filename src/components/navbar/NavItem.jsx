@@ -81,4 +81,27 @@ const NavItemStyled = styled.li`
       }
     }
   }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 0;
+
+    a {
+      .item-content {
+        padding: 0;
+
+        &:hover {
+          background-color: inherit;
+        }
+
+        .text {
+          display: none;
+        }
+
+        .icon,
+        .profile-img {
+          margin-right: 0;
+        }
+      }
+    }
+  }
 `;

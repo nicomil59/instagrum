@@ -29,17 +29,17 @@ const NavBarStyled = styled.div`
   left: 0;
 
   padding: 8px 12px 20px;
-  
+
   .navbar-container {
     margin-top: 18px;
-    
+
     height: calc(100vh - 47px);
-    
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  
+
   @media screen and (min-width: 1920px) {
     width: 335px;
   }
@@ -49,12 +49,30 @@ const NavBarStyled = styled.div`
   }
 
   @media screen and (max-width: 767px) {
+    border-right: 0;
+    border-top: 1px solid ${theme.colors.greyMedium};
+
+    background-color: ${theme.colors.white};
+
     bottom: 0;
     top: auto;
+    z-index: 5000;
 
     height: 50px;
     width: 100%;
 
-    z-index: 5000;
+    padding: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar-container {
+      margin-top: 0;
+
+      height: auto;
+
+      flex: 1;
+    }
   }
 `;

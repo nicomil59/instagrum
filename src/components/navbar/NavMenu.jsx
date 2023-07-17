@@ -1,27 +1,31 @@
 import { styled } from "styled-components";
 import {
   AiFillHome,
+  AiOutlineHome,
   AiOutlineCompass,
   AiOutlineHeart,
   AiOutlinePlaySquare,
   AiOutlinePlusSquare,
 } from "react-icons/ai";
 import { FaRegPaperPlane } from "react-icons/fa6";
+import { PiPaperPlaneTiltBold } from "react-icons/pi";
 import { RiSearchLine } from "react-icons/ri";
+import { GoHome } from "react-icons/go";
+import { GrHomeRounded } from "react-icons/gr";
 import NavItem from "./NavItem";
 
 const NavMenu = () => {
   return (
     <NavMenuStyled>
       <ul>
-        <NavItem Icon={<AiFillHome className="icon" />} text="Accueil" />
+        <NavItem Icon={<GrHomeRounded className="icon" />} text="Accueil" />
         <NavItem Icon={<RiSearchLine className="icon" />} text="Recherche" />
         <NavItem
           Icon={<AiOutlineCompass className="icon" />}
           text="Découvrir"
         />
         <NavItem Icon={<AiOutlinePlaySquare className="icon" />} text="Reels" />
-        <NavItem Icon={<FaRegPaperPlane className="icon" />} text="Messages" />
+        <NavItem Icon={<PiPaperPlaneTiltBold className="icon" />} text="Messages" />
         <NavItem
           Icon={<AiOutlineHeart className="icon" />}
           text="Notifications"
@@ -51,5 +55,44 @@ const NavMenuStyled = styled.nav`
 
   ul {
     list-style-type: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 0;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      li:nth-child(2) {
+        display: none;
+        order: 2;
+      }
+
+      li:nth-child(6) {
+        display: none;
+        order: 6;
+      }
+
+      li:nth-child(1) {
+        order: 1;
+      }
+      li:nth-child(3) {
+        order: 3;
+      }
+      li:nth-child(4) {
+        order: 4;
+      }
+      li:nth-child(5) {
+        order: 7;
+      }
+      li:nth-child(7) {
+        order: 5;
+      }
+      li:nth-child(8) {
+        order: 8;
+      }
+    }
   }
 `;

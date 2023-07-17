@@ -51,4 +51,8 @@ const NavLogoStyled = styled.a`
       display: none;
     }
   }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;

@@ -72,4 +72,8 @@ const NavPlusStyled = styled.button`
       margin-right: 0;
     }
   }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;
