@@ -4,6 +4,7 @@ import NavBar from "./components/navbar/NavBar";
 import Main from "./components/main/Main";
 import { styled } from "styled-components";
 import { theme } from "./theme";
+import TopBar from "./components/navbar/TopBar";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <AppStyled>
       <NavBar />
       <Main />
+      <TopBar />
     </AppStyled>
   );
 }
