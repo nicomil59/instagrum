@@ -1,10 +1,11 @@
 import { styled } from "styled-components";
+import Profile from "./profile/Profile";
 
 const Main = () => {
   return (
     <MainStyled>
       <div className="main-container">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio fuga laborum obcaecati accusamus, id repellendus doloribus soluta officiis reiciendis fugiat beatae. Commodi, esse.
+        <Profile />
       </div>
     </MainStyled>
   );
