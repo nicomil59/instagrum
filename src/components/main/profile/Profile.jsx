@@ -13,14 +13,17 @@ const Profile = () => {
       </div>
 
       <div className="profile-content">
-
         <div className="profile-header">
           <h1>{userProfile.username}</h1>
           <div className="buttons">
             <button>Suivre</button>
-            <button><FiUserPlus /></button>
+            <button>
+              <FiUserPlus />
+            </button>
           </div>
-          <div className="options"><BsThreeDots /></div>
+          <div className="options">
+            <BsThreeDots />
+          </div>
         </div>
 
         <div className="profile-stats">
@@ -40,9 +43,18 @@ const Profile = () => {
         <div className="profile-bio">
           <h2>{userProfile.fullName}</h2>
           <p>{userProfile.bio}</p>
-          <span><AiOutlineLink /> {userProfile.website}</span>
+          <span>
+            <AiOutlineLink /> {userProfile.website}
+          </span>
         </div>
-        
+      </div>
+
+      <div className="profile-bio-mobile">
+        <h2>{userProfile.fullName}</h2>
+        <p>{userProfile.bio}</p>
+        <span>
+          <AiOutlineLink /> {userProfile.website}
+        </span>
       </div>
     </ProfileStyled>
   );
@@ -69,5 +81,50 @@ const ProfileStyled = styled.section`
 
   .profile-content {
     background: lightpink;
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 8px;
+
+      background: #eee;
+    }
+  }
+
+  .profile-bio-mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 735px) {
+    flex-wrap: wrap;
+    
+    .profile-content {
+      .profile-header {
+        flex-wrap: wrap;
+
+        h1 {
+          order: 1;
+        }
+
+        .options {
+          order: 2;
+        }
+
+        .buttons {
+          order: 3;
+          width: 100%;
+        }
+      }
+
+      .profile-bio {
+        display: none;
+      }
+    }
+    .profile-bio-mobile {
+      margin-top: 24px;
+      display: block;
+      width: 100%;
+    }
   }
 `;
