@@ -1,9 +1,9 @@
 import React from "react";
 import { styled } from "styled-components";
-import { AiOutlineLink } from "react-icons/ai";
 import { theme } from "../../../theme";
 import ProfileHeader from "./ProfileHeader";
 import ProfileStats from "./ProfileStats";
+import ProfileBio from "./ProfileBio";
 
 const ProfileContent = ({ user }) => {
   const {
@@ -17,6 +17,7 @@ const ProfileContent = ({ user }) => {
   } = user;
 
   const stats = { postsCount, followersCount, followingCount };
+  const userInfo = {fullName, bio, website};
 
   return (
     <ProfileContentStyled className="profile-content">
@@ -38,6 +39,7 @@ const ProfileContent = ({ user }) => {
 
       <ProfileHeader username={username} />
       <ProfileStats {...stats} />
+      <ProfileBio {...userInfo} />
 
       {/* <div className="profile-stats">
         <ul className="stats-list">
@@ -57,7 +59,7 @@ const ProfileContent = ({ user }) => {
         </ul>
       </div> */}
 
-      <div className="profile-bio">
+      {/* <div className="profile-bio">
         <h2 className="fullname">{fullName}</h2>
         <p className="bio">{bio}</p>
         <span className="link">
@@ -66,7 +68,7 @@ const ProfileContent = ({ user }) => {
             {website.replace("https://", "")}
           </a>
         </span>
-      </div>
+      </div> */}
     </ProfileContentStyled>
   );
 };
@@ -168,7 +170,7 @@ const ProfileContentStyled = styled.div`
       }
     } */
 
-  .profile-bio {
+  /* .profile-bio {
     line-height: 18px;
 
     .fullname {
@@ -197,7 +199,7 @@ const ProfileContentStyled = styled.div`
         text-decoration: underline;
       }
     }
-  }
+  } */
 
   @media screen and (max-width: 735px) {
     /* height: 92px; */
@@ -225,8 +227,8 @@ const ProfileContentStyled = styled.div`
         display: none;
       } */
 
-    .profile-bio {
+    /* .profile-bio {
       display: none;
-    }
+    } */
   }
 `;
