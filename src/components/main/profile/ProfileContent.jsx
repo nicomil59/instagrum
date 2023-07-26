@@ -1,9 +1,8 @@
 import React from 'react'
 import { styled } from 'styled-components';
-import { BsThreeDots } from "react-icons/bs";
-import { FiUserPlus } from "react-icons/fi";
 import { AiOutlineLink } from "react-icons/ai";
 import { theme } from '../../../theme';
+import ProfileHeader from './ProfileHeader';
 
 const ProfileContent = ({user}) => {
   
@@ -11,7 +10,8 @@ const ProfileContent = ({user}) => {
   
     return (
     <ProfileContentStyled className="profile-content">
-        <div className="profile-header">
+
+        {/* <div className="profile-header">
           <h1>{username}</h1>
           <div className="buttons">
             <button className="btn btn-follow">Suivre</button>
@@ -25,7 +25,9 @@ const ProfileContent = ({user}) => {
               <BsThreeDots className="icon-dots" />
             </button>
           </div>
-        </div>
+        </div> */}
+
+        <ProfileHeader username={username} />
 
         <div className="profile-stats">
           <ul className="stats-list">
@@ -64,7 +66,7 @@ export default ProfileContent
 const ProfileContentStyled = styled.div`
     flex: 2;
 
-    .profile-header {
+    /* .profile-header {
       display: flex;
       align-items: center;
       gap: 16px;
@@ -138,7 +140,7 @@ const ProfileContentStyled = styled.div`
           }
         }
       }
-    }
+    } */
 
     .profile-stats {
       .stats-list {
@@ -191,12 +193,9 @@ const ProfileContentStyled = styled.div`
     
       /* height: 92px; */
 
-      .profile-header {
+      /* .profile-header {
         flex-wrap: wrap;
         margin-bottom: 0;
-
-        /* gap: 12px; */
-        /* align-items: flex-end; */
 
         h1 {
           order: 1;
@@ -211,7 +210,7 @@ const ProfileContentStyled = styled.div`
           width: 100%;
           margin-top: 8px;
         }
-      }
+      } */
 
       .profile-stats {
         display: none;
