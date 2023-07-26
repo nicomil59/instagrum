@@ -5,7 +5,9 @@ const colors = {
   greyExtraLight: "#f4f4f4",
   greyLight: "#efefef",
   greyMedium: "#dbdbdb",
-  greySemiDark: "#737373"
+  greySemiDark: "#737373",
+  blue: "#0095f6",
+  blueMedium: "#1877F2"
 };
 
 const fonts = {
