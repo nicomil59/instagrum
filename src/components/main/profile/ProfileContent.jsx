@@ -1,34 +1,18 @@
-import React from "react";
-import { styled } from "styled-components";
-import { userProfile } from "../../../assets/data/userData";
-import { AiOutlineLink } from "react-icons/ai";
+import React from 'react'
+import { styled } from 'styled-components';
 import { BsThreeDots } from "react-icons/bs";
 import { FiUserPlus } from "react-icons/fi";
-import { theme } from "../../../theme";
-import ProfilePicture from "./ProfilePicture";
-import ProfileContent from "./ProfileContent";
+import { AiOutlineLink } from "react-icons/ai";
+import { theme } from '../../../theme';
 
-const Profile = () => {
-  return (
-    <ProfileStyled>
-      {/* <div className="profile-picture">
-        <button className="picture-btn">
-          <img
-            src={userProfile.profilePictureUrl}
-            alt={`Photo de profil de ${userProfile.username}`}
-          />
-        </button>
-      </div> */}
-      <ProfilePicture
-        imgUrl={userProfile.profilePictureUrl}
-        username={userProfile.username}
-      />
-
-      <ProfileContent user={userProfile} />
-
-      {/* <div className="profile-content">
+const ProfileContent = ({user}) => {
+  
+  const {username, postsCount, followersCount, followingCount, fullName, bio, website} = user;
+  
+    return (
+    <ProfileContentStyled className="profile-content">
         <div className="profile-header">
-          <h1>{userProfile.username}</h1>
+          <h1>{username}</h1>
           <div className="buttons">
             <button className="btn btn-follow">Suivre</button>
             <button className="btn btn-contact">Contacter</button>
@@ -46,81 +30,38 @@ const Profile = () => {
         <div className="profile-stats">
           <ul className="stats-list">
             <li className="stats-item">
-              <span>{userProfile.postsCount}</span> publications
+              <span>{postsCount}</span> publications
             </li>
             <li className="stats-item">
               <a href="#">
-                <span>{userProfile.followersCount}</span> followers
+                <span>{followersCount}</span> followers
               </a>
             </li>
             <li className="stats-item">
               <a href="#">
-                <span>{userProfile.followingCount}</span> suivi(e)s
+                <span>{followingCount}</span> suivi(e)s
               </a>
             </li>
           </ul>
         </div>
 
         <div className="profile-bio">
-          <h2 className="fullname">{userProfile.fullName}</h2>
-          <p className="bio">{userProfile.bio}</p>
+          <h2 className="fullname">{fullName}</h2>
+          <p className="bio">{bio}</p>
           <span className="link">
             <AiOutlineLink className="icon-link" />
-            <a href={userProfile.website} target="_blank">
-              {userProfile.website.replace("https://", "")}
+            <a href={website} target="_blank">
+              {website.replace("https://", "")}
             </a>
           </span>
         </div>
-      </div> */}
+      </ProfileContentStyled>
+  )
+}
 
-      <div className="profile-bio-mobile">
-        <h2>{userProfile.fullName}</h2>
-        <p>{userProfile.bio}</p>
-        <span>
-          <AiOutlineLink className="icon-link" />
-          <a href={userProfile.website} target="_blank">
-            {userProfile.website.replace("https://", "")}
-          </a>
-        </span>
-      </div>
-    </ProfileStyled>
-  );
-};
+export default ProfileContent
 
-export default Profile;
-
-const ProfileStyled = styled.section`
-  /* background-color: white; */
-
-  display: flex;
-  align-items: center;
-  gap: 30px;
-
-  margin-top: 8px;
-
-  /* .profile-picture {
-    flex: 1;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .picture-btn {
-      border: 0;
-      background-color: inherit;
-      cursor: pointer;
-
-      img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        display: block;
-      }
-    }
-  } */
-
-  /* .profile-content {
+const ProfileContentStyled = styled.div`
     flex: 2;
 
     .profile-header {
@@ -245,38 +186,17 @@ const ProfileStyled = styled.section`
         }
       }
     }
-  } */
 
-  .profile-bio-mobile {
-    display: none;
-    line-height: 18px;
-  }
-
-  @media screen and (max-width: 735px) {
-    flex-wrap: wrap;
-    gap: 28px;
-    /* gap: 0; */
-    margin: 70px 16px 16px;
-    align-items: flex-start;
-
-    /* .profile-picture {
-      flex: 0;
-
-      margin-right: 28px;
-
-      .picture-btn {
-        img {
-          width: 77px;
-          height: 77px;
-        }
-      }
-    } */
-
-    /* .profile-content {
+    @media screen and (max-width: 735px) {
+    
+      /* height: 92px; */
 
       .profile-header {
         flex-wrap: wrap;
         margin-bottom: 0;
+
+        /* gap: 12px; */
+        /* align-items: flex-end; */
 
         h1 {
           order: 1;
@@ -300,39 +220,5 @@ const ProfileStyled = styled.section`
       .profile-bio {
         display: none;
       }
-    } */
-
-    .profile-bio-mobile {
-      margin-top: -4px;
-      display: block;
-      width: 100%;
-
-      h2 {
-        font-size: ${theme.fonts.sizes.S};
-        font-weight: ${theme.fonts.weights.semiBold};
-      }
-
-      p {
-        font-size: ${theme.fonts.sizes.S};
-      }
-
-      span {
-        color: ${theme.colors.dark};
-        font-size: ${theme.fonts.sizes.S};
-        font-weight: ${theme.fonts.weights.semiBold};
-
-        display: flex;
-        align-items: center;
-
-        .icon-link {
-          margin-right: 7px;
-          font-size: ${theme.fonts.sizes.M};
-        }
-
-        a:hover {
-          text-decoration: underline;
-        }
-      }
-    }
   }
 `;
