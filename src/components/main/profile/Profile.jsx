@@ -5,15 +5,23 @@ import { AiOutlineLink } from "react-icons/ai";
 import { BsThreeDots } from "react-icons/bs";
 import { FiUserPlus } from "react-icons/fi";
 import { theme } from "../../../theme";
+import ProfilePicture from "./ProfilePicture";
 
 const Profile = () => {
   return (
     <ProfileStyled>
-      <div className="profile-picture">
+      {/* <div className="profile-picture">
         <button className="picture-btn">
-          <img src={userProfile.profilePictureUrl} alt="profile picture" />
+          <img
+            src={userProfile.profilePictureUrl}
+            alt={`Photo de profil de ${userProfile.username}`}
+          />
         </button>
-      </div>
+      </div> */}
+      <ProfilePicture
+        imgUrl={userProfile.profilePictureUrl}
+        username={userProfile.username}
+      />
 
       <div className="profile-content">
         <div className="profile-header">
@@ -87,9 +95,7 @@ const ProfileStyled = styled.section`
 
   margin-top: 8px;
 
-  .profile-picture {
-    /* background: lightgrey; */
-    /* min-width: 292px; */
+  /* .profile-picture {
     flex: 1;
     height: 100%;
 
@@ -109,12 +115,7 @@ const ProfileStyled = styled.section`
         display: block;
       }
     }
-
-    /* @media screen and (max-width: 1069px) {
-      min-width: auto;
-      width: 25%;
-    } */
-  }
+  } */
 
   .profile-content {
     /* background: lightpink; */
@@ -216,7 +217,7 @@ const ProfileStyled = styled.section`
 
     .profile-bio {
       line-height: 18px;
-      
+
       .fullname {
         font-size: ${theme.fonts.sizes.S};
         font-weight: ${theme.fonts.weights.semiBold};
@@ -251,21 +252,14 @@ const ProfileStyled = styled.section`
     line-height: 18px;
   }
 
-  /* @media screen and (max-width: 1069px) {
-    .profile-picture {
-      min-width: auto;
-      width: 25%;
-    }
-  } */
-
   @media screen and (max-width: 735px) {
     flex-wrap: wrap;
-    /* gap: 28px; */
-    gap: 0;
+    gap: 28px;
+    /* gap: 0; */
     margin: 70px 16px 16px;
     align-items: flex-start;
 
-    .profile-picture {
+    /* .profile-picture {
       flex: 0;
 
       margin-right: 28px;
@@ -276,7 +270,7 @@ const ProfileStyled = styled.section`
           height: 77px;
         }
       }
-    }
+    } */
 
     .profile-content {
       /* height: 92px; */
@@ -312,7 +306,7 @@ const ProfileStyled = styled.section`
       }
     }
     .profile-bio-mobile {
-      margin-top: 24px;
+      margin-top: -4px;
       display: block;
       width: 100%;
 
