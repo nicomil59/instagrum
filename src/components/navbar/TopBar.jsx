@@ -7,7 +7,7 @@ const TopBar = () => {
   return (
     <TopBarStyled>
       <BsChevronLeft className="previous-icon" />
-      <h1 className="name-account">lemon_reactjs</h1>
+      <h1 className="name-account">bluelemon59</h1>
     </TopBarStyled>
   );
 };
