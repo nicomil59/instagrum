@@ -3,9 +3,9 @@ import { styled } from "styled-components";
 import { theme } from "../../../theme";
 import { AiOutlineLink } from "react-icons/ai";
 
-const ProfileBio = ({ fullName, bio, website }) => {
+const ProfileBio = ({ fullName, bio, website, className }) => {
   return (
-    <ProfileBioStyled className="profile-bio">
+    <ProfileBioStyled className={className}>
       <h2 className="fullname">{fullName}</h2>
       <p className="bio">{bio}</p>
       <span className="link">

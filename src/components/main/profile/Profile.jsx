@@ -7,6 +7,7 @@ import { FiUserPlus } from "react-icons/fi";
 import { theme } from "../../../theme";
 import ProfilePicture from "./ProfilePicture";
 import ProfileContent from "./ProfileContent";
+import ProfileBio from "./ProfileBio";
 
 const Profile = () => {
   return (
@@ -73,7 +74,7 @@ const Profile = () => {
         </div>
       </div> */}
 
-      <div className="profile-bio-mobile">
+      {/* <div className="profile-bio-mobile">
         <h2>{userProfile.fullName}</h2>
         <p>{userProfile.bio}</p>
         <span>
@@ -82,7 +83,9 @@ const Profile = () => {
             {userProfile.website.replace("https://", "")}
           </a>
         </span>
-      </div>
+      </div> */}
+
+      <ProfileBio fullName={userProfile.fullName} bio={userProfile.bio} website={userProfile.website} className="profile-bio-mobile" />
     </ProfileStyled>
   );
 };
@@ -249,7 +252,7 @@ const ProfileStyled = styled.section`
 
   .profile-bio-mobile {
     display: none;
-    line-height: 18px;
+    /* line-height: 18px; */
   }
 
   @media screen and (max-width: 735px) {
@@ -307,7 +310,7 @@ const ProfileStyled = styled.section`
       display: block;
       width: 100%;
 
-      h2 {
+      /* h2 {
         font-size: ${theme.fonts.sizes.S};
         font-weight: ${theme.fonts.weights.semiBold};
       }
@@ -332,7 +335,7 @@ const ProfileStyled = styled.section`
         a:hover {
           text-decoration: underline;
         }
-      }
+      } */
     }
   }
 `;
