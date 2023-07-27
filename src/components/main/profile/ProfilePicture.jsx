@@ -27,7 +27,6 @@ const ProfilePictureStyled = styled.div`
 
   @media screen and (max-width: 735px) {
     flex: 0;
-    /* margin-right: 28px; */
 
     img {
       width: 77px;

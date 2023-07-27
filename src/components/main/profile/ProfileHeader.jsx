@@ -105,9 +105,6 @@ const ProfileHeaderStyled = styled.div`
     flex-wrap: wrap;
     margin-bottom: 0;
 
-    /* gap: 12px; */
-    /* align-items: flex-end; */
-
     h1 {
       order: 1;
     }
