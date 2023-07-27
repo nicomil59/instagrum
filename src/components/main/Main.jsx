@@ -1,11 +1,13 @@
 import { styled } from "styled-components";
 import Profile from "./profile/Profile";
+import StoryHighlights from "./storyhighlights/StoryHighlights";
 
 const Main = () => {
   return (
     <MainStyled>
       <div className="main-container">
         <Profile />
+        <StoryHighlights />
       </div>
     </MainStyled>
   );
