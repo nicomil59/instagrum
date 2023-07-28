@@ -1,51 +1,26 @@
 import { styled } from "styled-components";
 import { theme } from "../../../theme";
+import { userProfile } from "../../../assets/data/userData";
 
 const StoryHighlights = () => {
+  
+  const {storyHighlights : items} = userProfile;
+  
   return (
     <StoryHighlightsStyled>
       <ul className="list">
-        <li className="storyhighlight">
+        {items.map((item, index) => (
+          <li key={index} className="storyhighlight">
           <button className="storyhighlight-btn">
             <img
               className="storyhighlight-img"
-              src="https://picsum.photos/200"
-              alt="story highlight cover"
+              src={item.coverImage}
+              alt={`Photo de ${item.title}`}
             />
           </button>
-          <span className="storyhighlight-title">Title</span>
+          <span className="storyhighlight-title">{item.title}</span>
         </li>
-        <li className="storyhighlight">
-          <button className="storyhighlight-btn">
-            <img
-              className="storyhighlight-img"
-              src="https://picsum.photos/200"
-              alt="story highlight cover"
-            />
-          </button>
-          <span className="storyhighlight-title">Title</span>
-        </li>
-        <li className="storyhighlight">
-          <button className="storyhighlight-btn">
-            <img
-              className="storyhighlight-img"
-              src="https://picsum.photos/200"
-              alt="story highlight cover"
-            />
-          </button>
-          <span className="storyhighlight-title">Title</span>
-        </li>
-        <li className="storyhighlight">
-          <button className="storyhighlight-btn">
-            <img
-              className="storyhighlight-img"
-              src="https://picsum.photos/200"
-              alt="story highlight cover"
-            />
-          </button>
-          <span className="storyhighlight-title">Title</span>
-        </li>
-        
+        ))}
       </ul>
     </StoryHighlightsStyled>
   );

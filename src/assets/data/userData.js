@@ -1,4 +1,4 @@
-import profilPicture from '../images/lemon-avatar.png'
+import profilPicture from "../images/lemon-avatar.png";
 
 export const userProfile = {
   username: "bluelemon59",
@@ -9,5 +9,22 @@ export const userProfile = {
   followingCount: 229,
   postsCount: 22,
   profilePictureUrl: profilPicture,
-  storyHighlights: []
+  storyHighlights: [
+    {
+      title: "Lorem",
+      coverImage: "/src/assets/images/storyhigh-images/sh-img1.jpg",
+    },
+    {
+      title: "Ipsum",
+      coverImage: "/src/assets/images/storyhigh-images/sh-img2.jpg",
+    },
+    {
+      title: "Dolor",
+      coverImage: "/src/assets/images/storyhigh-images/sh-img3.jpg",
+    },
+    {
+      title: "Sit",
+      coverImage: "/src/assets/images/storyhigh-images/sh-img4.jpg",
+    }
+  ],
 };
