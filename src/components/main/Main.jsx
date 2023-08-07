@@ -2,14 +2,21 @@ import { styled } from "styled-components";
 import Profile from "./profile/Profile";
 import StoryHighlights from "./storyhighlights/StoryHighlights";
 import Stats from "./stats/Stats";
+import { userProfile } from "../../assets/data/userData";
 
 const Main = () => {
+  
+  console.log(userProfile)
+
+  const {postsCount, followersCount, followingCount} = userProfile;
+  const stats = { postsCount, followersCount, followingCount };
+  
   return (
     <MainStyled>
       <div className="main-container">
         <Profile />
         <StoryHighlights />
-        <Stats className="stats-mobile" />
+        <Stats className="stats-mobile" {...stats} />
       </div>
     </MainStyled>
   );
