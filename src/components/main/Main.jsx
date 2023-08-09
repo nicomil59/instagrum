@@ -3,6 +3,7 @@ import Profile from "./profile/Profile";
 import StoryHighlights from "./storyhighlights/StoryHighlights";
 import Stats from "./stats/Stats";
 import { userProfile } from "../../assets/data/userData";
+import Content from "./content/Content";
 
 const Main = () => {
   
@@ -15,6 +16,7 @@ const Main = () => {
         <Profile />
         <StoryHighlights />
         <Stats className="stats-mobile" {...stats} />
+        <Content />
       </div>
     </MainStyled>
   );
