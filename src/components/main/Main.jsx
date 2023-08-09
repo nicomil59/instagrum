@@ -1,13 +1,20 @@
 import { styled } from "styled-components";
 import Profile from "./profile/Profile";
 import StoryHighlights from "./storyhighlights/StoryHighlights";
+import Stats from "./stats/Stats";
+import { userProfile } from "../../assets/data/userData";
 
 const Main = () => {
+  
+  const {postsCount, followersCount, followingCount} = userProfile;
+  const stats = { postsCount, followersCount, followingCount };
+  
   return (
     <MainStyled>
       <div className="main-container">
         <Profile />
         <StoryHighlights />
+        <Stats className="stats-mobile" {...stats} />
       </div>
     </MainStyled>
   );
@@ -24,6 +31,10 @@ const MainStyled = styled.main`
     max-width: 975px;
     margin: 0 auto;
     padding: 30px 20px 0;
+
+    .stats-mobile {
+      display: none;
+    }
   }
 
   @media screen and (min-width: 1920px) {
@@ -43,6 +54,10 @@ const MainStyled = styled.main`
   @media screen and (max-width: 735px) {
     .main-container {
       padding: 0;
+
+      .stats-mobile {
+        display: block;
+      }
     }
   }
 `;
