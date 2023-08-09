@@ -6,8 +6,6 @@ import { userProfile } from "../../assets/data/userData";
 
 const Main = () => {
   
-  console.log(userProfile)
-
   const {postsCount, followersCount, followingCount} = userProfile;
   const stats = { postsCount, followersCount, followingCount };
   
