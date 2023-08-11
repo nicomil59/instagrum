@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { styled } from "styled-components";
+import { theme } from "../../../theme";
+import { BsGrid3X3 } from "react-icons/bs";
+import { AiOutlinePlaySquare } from "react-icons/ai";
+import { MdOutlinePersonPin } from "react-icons/md";
 
 const Content = () => {
   const [activeTab, setActiveTab] = useState("posts-tab");
 
   const showTab = (e) => {
     console.log("click on tab");
-    console.log(e.target.id);
-    setActiveTab(e.target.id);
+    console.log(e.target.parentNode);
+    setActiveTab(e.target.parentNode.id);
   };
 
   return (
@@ -18,21 +22,24 @@ const Content = () => {
           className={`tab-btn ${activeTab === "posts-tab" ? "active" : ""}`}
           id="posts-tab"
         >
-          Publications
+          <BsGrid3X3 className="icon" />
+          <span className="btn-label">Publications</span>
         </button>
         <button
           onClick={showTab}
           className={`tab-btn ${activeTab === "reels-tab" ? "active" : ""}`}
           id="reels-tab"
         >
-          Reels
+          <AiOutlinePlaySquare className="icon" />
+          <span className="btn-label">Reels</span>
         </button>
         <button
           onClick={showTab}
           className={`tab-btn ${activeTab === "tagged-tab" ? "active" : ""}`}
           id="tagged-tab"
         >
-          Identifié(e)
+          <MdOutlinePersonPin className="icon" />
+          <span className="btn-label">Identifié(e)</span>
         </button>
       </div>
 
@@ -67,23 +74,39 @@ const Content = () => {
 export default Content;
 
 const ContentStyled = styled.section`
-  background-color: lightblue;
+  border-top: 1px solid ${theme.colors.greyMedium};
 
   .tabs {
     display: flex;
+    justify-content: center;
+    gap: 60px;
 
     .tab-btn {
-      flex: 1;
-      padding: 10px 0;
-      background-color: #eee;
-      border: 1px solid #ccc;
+      padding: 18px 0;
+      background-color: ${theme.colors.white};
+      border: 0;
       text-align: center;
       cursor: pointer;
+      color: ${theme.colors.greySemiDark};
+      font-weight: ${theme.fonts.weights.semiBold};
+      font-size: ${theme.fonts.sizes.XS};
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      display: flex;
+      align-items: center;
+
+      height: 52px;
 
       &.active {
-        font-weight: bold;
-        color: red;
-        border-top: 1px solid red;
+        color: ${theme.colors.black};
+        border-top: 1px solid ${theme.colors.black};
+
+        margin-top: -1px;
+      }
+
+      .icon {
+        margin-right: 6px;
       }
     }
   }
@@ -97,6 +120,18 @@ const ContentStyled = styled.section`
 
       &.active {
         display: block;
+      }
+    }
+  }
+
+  @media screen and (max-width: 735px) {
+    .tabs {
+      .tab-btn {
+        font-size: 24px;
+
+        .btn-label {
+          display: none;
+        }
       }
     }
   }
