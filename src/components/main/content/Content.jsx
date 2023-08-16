@@ -5,6 +5,9 @@ import { BsGrid3X3 } from "react-icons/bs";
 import { AiOutlinePlaySquare } from "react-icons/ai";
 import { MdOutlinePersonPin } from "react-icons/md";
 import TabItem from "./TabItem";
+import Posts from "./posts/Posts";
+import Reels from "./Reels";
+import Tagged from "./Tagged";
 
 const Content = () => {
   const [activeTab, setActiveTab] = useState("posts-tab");
@@ -59,14 +62,14 @@ const Content = () => {
           className={`tab-content ${activeTab === "posts-tab" ? "active" : ""}`}
           id="posts"
         >
-          <p>Liste des publications...</p>
+          <Posts />
         </div>
 
         <div
           className={`tab-content ${activeTab === "reels-tab" ? "active" : ""}`}
           id="reels"
         >
-          <p>Liste des reels...</p>
+          <Reels />
         </div>
 
         <div
@@ -75,7 +78,7 @@ const Content = () => {
           }`}
           id="tagged"
         >
-          <p>Liste des identifié(e)s...</p>
+          <Tagged />
         </div>
       </div>
     </ContentStyled>
