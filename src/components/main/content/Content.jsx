@@ -4,43 +4,54 @@ import { theme } from "../../../theme";
 import { BsGrid3X3 } from "react-icons/bs";
 import { AiOutlinePlaySquare } from "react-icons/ai";
 import { MdOutlinePersonPin } from "react-icons/md";
+import TabItem from "./TabItem";
 
 const Content = () => {
   const [activeTab, setActiveTab] = useState("posts-tab");
 
-  const showTab = (e) => {
-    console.log("click on tab");
-    console.log(e.target.parentNode);
-    setActiveTab(e.target.parentNode.id);
-  };
+  // const showTab = (e) => {
+  //   console.log("click on tab");
+  //   console.log(e.target.parentNode);
+  //   setActiveTab(e.target.parentNode.id);
+  // };
 
   return (
     <ContentStyled>
       <div className="tabs">
-        <button
+        
+        {/* <button
           onClick={showTab}
           className={`tab-btn ${activeTab === "posts-tab" ? "active" : ""}`}
           id="posts-tab"
         >
           <BsGrid3X3 className="icon" />
           <span className="btn-label">Publications</span>
-        </button>
-        <button
+        </button> */}
+
+        <TabItem id="posts-tab" label="Publications" Icon={<BsGrid3X3 className="icon" />} activeTab={activeTab} setActiveTab={setActiveTab} />
+
+        <TabItem id="reels-tab" label="Reels" Icon={<AiOutlinePlaySquare className="icon" />} activeTab={activeTab} setActiveTab={setActiveTab} />
+
+        <TabItem id="tagged-tab" label="Tagged" Icon={<MdOutlinePersonPin className="icon" />} activeTab={activeTab} setActiveTab={setActiveTab} />
+
+        {/* <button
           onClick={showTab}
           className={`tab-btn ${activeTab === "reels-tab" ? "active" : ""}`}
           id="reels-tab"
         >
           <AiOutlinePlaySquare className="icon" />
           <span className="btn-label">Reels</span>
-        </button>
-        <button
+        </button> */}
+
+        {/* <button
           onClick={showTab}
           className={`tab-btn ${activeTab === "tagged-tab" ? "active" : ""}`}
           id="tagged-tab"
         >
           <MdOutlinePersonPin className="icon" />
           <span className="btn-label">Identifié(e)</span>
-        </button>
+        </button> */}
+
       </div>
 
       <div className="content">
@@ -80,8 +91,9 @@ const ContentStyled = styled.section`
     display: flex;
     justify-content: center;
     gap: 60px;
+    height: 52px;
 
-    .tab-btn {
+    /* .tab-btn {
       padding: 18px 0;
       background-color: ${theme.colors.white};
       border: 0;
@@ -108,7 +120,7 @@ const ContentStyled = styled.section`
       .icon {
         margin-right: 6px;
       }
-    }
+    } */
   }
 
   .content {
@@ -124,7 +136,7 @@ const ContentStyled = styled.section`
     }
   }
 
-  @media screen and (max-width: 735px) {
+  /* @media screen and (max-width: 735px) {
     .tabs {
       .tab-btn {
         font-size: 24px;
@@ -134,5 +146,5 @@ const ContentStyled = styled.section`
         }
       }
     }
-  }
+  } */
 `;
