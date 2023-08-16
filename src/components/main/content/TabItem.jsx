@@ -47,6 +47,21 @@ const TabItemStyled = styled.button`
   @media screen and (max-width: 735px) {
     font-size: 24px;
 
+    flex: 1;
+    justify-content: center;
+
+    &:first-child {
+      .icon {
+        font-size: ${theme.fonts.sizes.L};
+      }
+    }
+
+    &.active {
+      .icon {
+        color: ${theme.colors.blue};
+      }
+    }
+
     .btn-label {
       display: none;
     }

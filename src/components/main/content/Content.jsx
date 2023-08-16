@@ -136,15 +136,10 @@ const ContentStyled = styled.section`
     }
   }
 
-  /* @media screen and (max-width: 735px) {
+  @media screen and (max-width: 735px) {
     .tabs {
-      .tab-btn {
-        font-size: 24px;
-
-        .btn-label {
-          display: none;
-        }
-      }
+      gap: 0;
+      height: 44px;
     }
-  } */
+  }
 `;
