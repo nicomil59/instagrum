@@ -17,7 +17,7 @@ const TaggedStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 0 60px;
+  padding: 60px 0 60px;
 
   .icon {
     font-size: 62px;
