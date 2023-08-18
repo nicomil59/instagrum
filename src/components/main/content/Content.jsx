@@ -72,7 +72,11 @@ const ContentStyled = styled.section`
 
   .content {
     background-color: lightblue;
-    padding: 20px;
+    /* padding: 20px; */
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 50px;
   }
 
   @media screen and (max-width: 735px) {
