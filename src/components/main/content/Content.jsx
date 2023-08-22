@@ -71,7 +71,7 @@ const ContentStyled = styled.section`
   }
 
   .content {
-    background-color: lightblue;
+    background-color: pink;
     /* padding: 20px; */
   }
 
