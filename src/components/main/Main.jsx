@@ -25,7 +25,7 @@ const Main = () => {
 export default Main;
 
 const MainStyled = styled.main`
-  min-height: 100vh;
+  /* min-height: 100vh; */
   margin-left: 244px;
 
   .main-container {
