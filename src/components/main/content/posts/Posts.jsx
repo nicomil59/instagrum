@@ -2,23 +2,26 @@ import { styled } from "styled-components";
 import { AiFillHeart } from "react-icons/ai";
 import { BiSolidMessageRounded } from "react-icons/bi";
 import { theme } from "../../../../theme";
-import img1 from "../../../../assets/images/post-images/post-image01.jpg";
+import { userPosts } from "../../../../assets/data/userData";
 
 const Posts = () => {
+  
+  const {imageUrl, caption, likesCount, comments} = userPosts[0];  
+  
   return (
     <PostsStyled>
       <div className="post-item">
         <a className="post-link" href="#">
-          <img className="post-img" src={img1} alt="agrums" />
+          <img className="post-img" src={imageUrl} alt={caption} />
           <div className="post-overlay">
             <div className="stats">
               <div className="stats-item likes">
                 <AiFillHeart />
-                <span> 4</span>
+                <span> {likesCount}</span>
               </div>
               <div className="stats-item comments">
                 <BiSolidMessageRounded />
-                <span> 0</span>
+                <span> {comments}</span>
               </div>
             </div>
           </div>
