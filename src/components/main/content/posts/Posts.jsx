@@ -3,9 +3,14 @@ import { userPosts } from "../../../../assets/data/userData";
 import Post from "./Post";
 
 const Posts = () => {
+  
+  const allPosts = [...userPosts].reverse();
+
   return (
     <PostsStyled>
-      <Post {...userPosts[0]} />
+      {allPosts.map((post) => (
+        <Post key={post.id} {...post} />
+      ))}
     </PostsStyled>
   );
 };

@@ -49,60 +49,70 @@ export const userPosts = [
     imageUrl: postImage01,
     caption: "Some agrums",
     likesCount: 14,
-    comments: 8
+    comments: 8,
+    id: 1
   },
   {
     imageUrl: postImage02,
     caption: "sliced agrums",
     likesCount: 20,
-    comments: 3
+    comments: 3,
+    id: 2    
   },
   {
     imageUrl: postImage03,
     caption: "Slices of lemon",
     likesCount: 7,
-    comments: 1
+    comments: 1,
+    id: 3
   },
   {
     imageUrl: postImage04,
     caption: "Lemon close-up",
     likesCount: 12,
-    comments: 5
+    comments: 5,
+    id: 4
   },
   {
     imageUrl: postImage05,
     caption: "Lemon tree",
     likesCount: 5,
-    comments: 1
+    comments: 1,
+    id: 5
   },
   {
     imageUrl: postImage06,
     caption: "Sliced lemon",
     likesCount: 3,
-    comments: 2
+    comments: 2,
+    id: 6
   },
   {
     imageUrl: postImage07,
     caption: "Water with lemon pieces",
     likesCount: 6,
-    comments: 3
+    comments: 3,
+    id: 7
   },
   {
     imageUrl: postImage08,
     caption: "Several sliced lemons",
     likesCount: 31,
-    comments: 15
+    comments: 15,
+    id: 8
   },
   {
     imageUrl: postImage09,
     caption: "lemon pieces with a juicer",
     likesCount: 8,
-    comments: 2
+    comments: 2,
+    id: 9
   },
   {
     imageUrl: postImage10,
     caption: "pieces of lemon, orange and kiwi",
     likesCount: 3,
-    comments: 0
+    comments: 0,
+    id: 10
   },
 ];
