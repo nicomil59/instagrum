@@ -70,11 +70,6 @@ const ContentStyled = styled.section`
     height: 52px;
   }
 
-  .content {
-    background-color: pink;
-    /* padding: 20px; */
-  }
-
   @media screen and (max-width: 767px) {
     margin-bottom: 50px;
   }
