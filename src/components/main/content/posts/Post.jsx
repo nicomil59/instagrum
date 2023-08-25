@@ -32,6 +32,7 @@ const PostStyled = styled.article`
 
   .post-link {
     position: relative;
+    display: block;
 
     .post-img {
       display: block;
