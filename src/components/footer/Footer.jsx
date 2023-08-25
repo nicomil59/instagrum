@@ -1,82 +1,76 @@
 import { styled } from "styled-components";
 import { BsChevronDown } from "react-icons/bs";
 import { theme } from "../../theme";
+import FooterItem from "./FooterItem";
 
 const Footer = () => {
+  const footerItems = [
+    {
+      text: "Metu",
+      underline: true,
+    },
+    {
+      text: "À propos",
+      underline: true,
+    },
+    {
+      text: "Blog",
+      underline: true,
+    },
+    {
+      text: "Emplois",
+      underline: false,
+    },
+    {
+      text: "Aide",
+      underline: true,
+    },
+    {
+      text: "API",
+      underline: true,
+    },
+    {
+      text: "Confidentialité",
+      underline: false,
+    },
+    {
+      text: "Conditions",
+      underline: false,
+    },
+    {
+      text: "Comptes principaux",
+      underline: false,
+    },
+    {
+      text: "Lieux",
+      underline: false,
+    },
+    {
+      text: "Instagrum Lite",
+      underline: false,
+    },
+    {
+      text: "Threads",
+      underline: true,
+    },
+    {
+      text: "Importation des contacts et non-utilisateurs",
+      underline: false,
+    },
+    {
+      text: "Metu Verified",
+      underline: true,
+    },
+  ];
+
   return (
     <FooterStyled>
       <div className="footer-container">
         <ul className="footer-links">
-          <li className="footer-item">
-            <a className="footer-link underline" href="#">
-              Metu
-            </a>
-          </li>
-          <li className="footer-item">
-            <a className="footer-link underline" href="#">
-              À propos
-            </a>
-          </li>
-          <li className="footer-item">
-            <a className="footer-link underline" href="#">
-              Blog
-            </a>
-          </li>
-          <li className="footer-item">
-            <a className="footer-link" href="#">
-              Emplois
-            </a>
-          </li>
-          <li className="footer-item">
-            <a className="footer-link underline" href="#">
-              Aide
-            </a>
-          </li>
-          <li className="footer-item">
-            <a className="footer-link underline" href="#">
-              API
-            </a>
-          </li>
-          <li className="footer-item">
-            <a className="footer-link" href="#">
-              Confidentialité
-            </a>
-          </li>
-          <li className="footer-item">
-            <a className="footer-link" href="#">
-              Conditions
-            </a>
-          </li>
-          <li className="footer-item">
-            <a className="footer-link" href="#">
-              Comptes principaux
-            </a>
-          </li>
-          <li className="footer-item">
-            <a className="footer-link" href="#">
-              Lieux
-            </a>
-          </li>
-          <li className="footer-item">
-            <a className="footer-link" href="#">
-              Instagrum Lite
-            </a>
-          </li>
-          <li className="footer-item">
-            <a className="footer-link underline" href="#">
-              Threads
-            </a>
-          </li>
-          <li className="footer-item">
-            <a className="footer-link" href="#">
-              Importation des contacts et non-utilisateurs
-            </a>
-          </li>
-          <li className="footer-item">
-            <a className="footer-link underline" href="#">
-              Metu Verified
-            </a>
-          </li>
+          {footerItems.map((item, index) => (
+            <FooterItem key={index} {...item} />
+          ))}
+
         </ul>
         <div className="footer-bottom">
           <span>
@@ -113,16 +107,6 @@ const FooterStyled = styled.footer`
       flex-wrap: wrap;
       column-gap: 16px;
       row-gap: 7px;
-
-      .footer-item {
-        .footer-link {
-          white-space: nowrap;
-
-          &:hover.underline {
-            text-decoration: underline;
-          }
-        }
-      }
     }
 
     .footer-bottom {
