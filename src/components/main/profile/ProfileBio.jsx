@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
-import { theme } from "../../../theme";
 import { AiOutlineLink } from "react-icons/ai";
+import { theme } from "../../../theme";
 
 const ProfileBio = ({ fullName, bio, website, className }) => {
   return (

@@ -1,5 +1,5 @@
-import { AiOutlineMenu } from "react-icons/ai";
 import { styled } from "styled-components";
+import { AiOutlineMenu } from "react-icons/ai";
 import { theme } from "../../theme";
 
 const NavPlus = () => {
@@ -16,22 +16,10 @@ const NavPlus = () => {
 export default NavPlus;
 
 const NavPlusStyled = styled.button`
-  /* background: lightgoldenrodyellow; */
   all: unset;
   cursor: pointer;
 
-  /* padding: 12px;
-  border-radius: ${theme.borderRadius.round};
-
-  display: flex;
-  align-items: center;
-
-  transition: background-color 0.3s; */
-
   &:hover {
-    /* background-color: ${theme.colors.greyExtraLight};
-    transition: background-color 0.3s; */
-
     .icon {
       transform: scale(1.1);
       transition: transform 0.3s;
