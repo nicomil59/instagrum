@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { styled } from "styled-components";
-import { theme } from "../../../theme";
 import { BsGrid3X3 } from "react-icons/bs";
 import { AiOutlinePlaySquare } from "react-icons/ai";
 import { MdOutlinePersonPin } from "react-icons/md";
+import { theme } from "../../../theme";
 import TabItem from "./TabItem";
 import Posts from "./posts/Posts";
 import Reels from "./Reels";

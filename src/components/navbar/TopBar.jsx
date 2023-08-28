@@ -1,6 +1,6 @@
 import React from "react";
-import { BsChevronLeft } from "react-icons/bs";
 import { styled } from "styled-components";
+import { BsChevronLeft } from "react-icons/bs";
 import { theme } from "../../theme";
 
 const TopBar = () => {

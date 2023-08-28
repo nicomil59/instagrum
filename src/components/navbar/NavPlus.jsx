@@ -1,5 +1,5 @@
-import { AiOutlineMenu } from "react-icons/ai";
 import { styled } from "styled-components";
+import { AiOutlineMenu } from "react-icons/ai";
 import { theme } from "../../theme";
 
 const NavPlus = () => {

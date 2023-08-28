@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
+import { theme } from "../../theme";
 import NavLogo from "./NavLogo";
 import NavMenu from "./NavMenu";
 import NavPlus from "./NavPlus";
-import { theme } from "../../theme";
 
 const NavBar = () => {
   return (

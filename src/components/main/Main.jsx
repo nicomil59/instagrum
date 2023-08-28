@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
+import { userProfile } from "../../assets/data/userData";
 import Profile from "./profile/Profile";
 import StoryHighlights from "./storyhighlights/StoryHighlights";
 import Stats from "./stats/Stats";
-import { userProfile } from "../../assets/data/userData";
 import Content from "./content/Content";
 
 const Main = () => {

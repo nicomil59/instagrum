@@ -1,8 +1,8 @@
 import React from "react";
 import { styled } from "styled-components";
-import { theme } from "../../../theme";
 import { BsThreeDots } from "react-icons/bs";
 import { FiUserPlus } from "react-icons/fi";
+import { theme } from "../../../theme";
 
 const ProfileHeader = ({ username }) => {
   return (
