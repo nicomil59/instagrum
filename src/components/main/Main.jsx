@@ -25,11 +25,9 @@ const Main = () => {
 export default Main;
 
 const MainStyled = styled.main`
-  /* min-height: 100vh; */
   margin-left: 244px;
 
   .main-container {
-    /* background-color: lightblue; */
     max-width: 975px;
     margin: 0 auto;
     padding: 30px 20px 0;
@@ -49,7 +47,6 @@ const MainStyled = styled.main`
 
   @media screen and (max-width: 767px) {
     margin-left: 0px;
-    /* min-height: calc(100vh - 50px); */
     margin-top: 44px;
   }
 

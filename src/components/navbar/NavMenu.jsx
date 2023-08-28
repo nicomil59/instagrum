@@ -1,16 +1,12 @@
 import { styled } from "styled-components";
 import {
-  AiFillHome,
-  AiOutlineHome,
   AiOutlineCompass,
   AiOutlineHeart,
   AiOutlinePlaySquare,
   AiOutlinePlusSquare,
 } from "react-icons/ai";
-import { FaRegPaperPlane } from "react-icons/fa6";
 import { PiPaperPlaneTiltBold } from "react-icons/pi";
 import { RiSearchLine } from "react-icons/ri";
-import { GoHome } from "react-icons/go";
 import { GrHomeRounded } from "react-icons/gr";
 import NavItem from "./NavItem";
 
@@ -49,8 +45,6 @@ const NavMenu = () => {
 export default NavMenu;
 
 const NavMenuStyled = styled.nav`
-  /* background: lightsalmon; */
-
   margin-bottom: auto;
 
   ul {
